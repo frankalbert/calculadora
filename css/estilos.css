@@ -7,33 +7,41 @@
 .contenedor__calculadora {
     margin: 30px auto;
     padding: 2rem;
-    width: 30%;
-    min-height: 500px;
+    width: 16%;
+    min-height: 270px;
     background: var(--colorTerciario);
 }
 
 .calculadora {
     float: left;
-    width: 100%;
+    width: 98.3%;
     display: flex;
     flex-direction: column;
-    min-height: 150px;
 }
 
 .elemento--resultado {
     float: left; 
+    margin: 0 0 .4rem .1rem;
     padding: .5rem;
     font-size: 1.2rem;
+    text-align: right;
 }
 
 .elemento--tabla{
-    width: 150px;
+    width: 100%;
+    border-spacing: 0;
 }
 
 .tabla__calculadora{
-    padding: .6rem .7rem;
+    margin: .1rem;
     width: 50px;
+    height: 50px;
     font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
 }
 
 .tabla__calculadora:hover{
@@ -44,5 +52,5 @@
 }
 
 #limpiar, #igual{
-    width: 100%;
+    width: 97%;
 }
