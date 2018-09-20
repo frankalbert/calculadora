@@ -9,7 +9,44 @@
 </head>
 <body>
 
-    
+    <div class="contenedor__calculadora">
+
+        <div class="calculadora">
+
+            <input class="elemento__calculadora elemento--resultado" id="resultado" placeholder="0" />
+
+            <table class="elemento__calculadora elemento--tabla">
+                <tr>
+                    <td><input type="button" class="tabla__calculadora boton--siete" id="siete" value="7" /></td>
+                    <td><input type="button" class="tabla__calculadora boton--ocho" id="ocho" value="8" /></td>
+                    <td><input type="button" class="tabla__calculadora boton--nueve" id="nueve" value="9" /></td>
+                    <td colspan="4"><input type="button" class="tabla__calculadora boton--limpiar" id="limpiar" value="C" /></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="tabla__calculadora boton--cuatro" id="cuatro" value="4" /></td>
+                    <td><input type="button" class="tabla__calculadora boton--cinco" id="cinco" value="5" /></td>
+                    <td><input type="button" class="tabla__calculadora boton--seis" id="seis" value="6" /></td>
+                    <td><input type="button" class="tabla__calculadora boton--multiplicar" id="multiplicar" value="*" /></td>
+                    <td><input type="button" class="tabla__calculadora boton--dividir" id="dividir" value="/" /></td>
+               </tr>
+                <tr>
+                    <td><input type="button" class="tabla__calculadora boton--uno" id="uno" value="1" /></td>
+                    <td><input type="button" class="tabla__calculadora boton--dos" id="dos" value="2" /></td>
+                    <td><input type="button" class="tabla__calculadora boton--tres" id="tres" value="3" /></td>
+                    <td><input type="button" class="tabla__calculadora boton--sumar" id="sumar" value="+" /></td>
+                    <td><input type="button" class="tabla__calculadora boton--restar" id="restar" value="-" /></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="tabla__calculadora boton--coma" id="punto" value="." /></td>
+                    <td><input type="button" class="tabla__calculadora boton--cero" id="cero" value="0" /></td>
+                    <td><input type="button" class="tabla__calculadora boton--igual" id="borrar" value="<" /></td>
+                    <td colspan="4"><input type="button" class="tabla__calculadora boton--igual" id="igual" value="=" /></td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
 
     <script src="./js/app.js"></script>
 </body>
