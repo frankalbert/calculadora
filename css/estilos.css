@@ -7,8 +7,8 @@
 .contenedor__calculadora {
     margin: 30px auto;
     padding: 2rem;
-    width: 282px;
-    min-height: 270px;
+    width: 346px;
+    min-height: 330px;
     background: var(--colorTerciario);
 }
 

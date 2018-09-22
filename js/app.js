@@ -1,4 +1,7 @@
+let almacenamiento = window.localStorage;
+
 const resultado = document.querySelector('#resultado'),
+    contenidoRegistro = document.querySelector('#contenido__registro');
     cero = document.querySelector('#cero'),
     uno = document.querySelector('#uno'),
     dos = document.querySelector('#dos'),
@@ -17,6 +20,12 @@ const resultado = document.querySelector('#resultado'),
     punto = document.querySelector('#punto'),
     igual = document.querySelector('#igual');
     borrar = document.querySelector('#borrar');
+
+(!almacenamiento.getItem('arregloResultados')) ? (arregloResultados = []) 
+: (
+    arregloResultados = JSON.parse(almacenamiento.getItem('arregloResultados')),
+    listarRegistroResultados()
+)
 
 cero.addEventListener('click', function(){
     insertar(cero.value);
@@ -67,13 +76,32 @@ punto.addEventListener('click', function(){
     insertar(punto.value);
 });
 igual.addEventListener('click', function(){
+    insertarResultado(resultado.value);
     resultado.value = eval(resultado.value);
+    listarRegistroResultados()
 });
 borrar.addEventListener('click', function(){
     resultado.value = resultado.value.substring(0,resultado.value.length - 1);
 });
 
-
 function insertar(num){
     resultado.value = resultado.value + num;
+}
+
+function insertarResultado(parametro){
+    arregloResultados.push({expresion: parametro, valor: eval(parametro)})    
+    almacenamiento.setItem("arregloResultados", JSON.stringify(arregloResultados))
+}
+
+function listarRegistroResultados(){
+    contenidoRegistro.innerHTML = '';
+    arregloResultados.map(function(elemento, indice){
+        contenidoRegistro.innerHTML += `
+            <tr>
+                <th scope="row">${indice + 1}</th>
+                <td>${elemento.expresion}</td>
+                <td>${elemento.valor}</td>
+            </tr>    
+        `
+    })
 }
