@@ -18,8 +18,9 @@ const resultado = document.querySelector('#resultado'),
     dividir = document.querySelector('#dividir'),
     limpiar = document.querySelector('#limpiar'),
     punto = document.querySelector('#punto'),
-    igual = document.querySelector('#igual');
-    borrar = document.querySelector('#borrar');
+    igual = document.querySelector('#igual'),
+    borrar = document.querySelector('#borrar'),
+    limpiarHistorial = document.querySelector('#limpiar__historial');
 
 (!almacenamiento.getItem('arregloResultados')) ? (arregloResultados = []) 
 : (
@@ -83,6 +84,7 @@ igual.addEventListener('click', function(){
 borrar.addEventListener('click', function(){
     resultado.value = resultado.value.substring(0,resultado.value.length - 1);
 });
+limpiarHistorial.addEventListener('click', limpiarTodoHistorial);
 
 function insertar(num){
     resultado.value = resultado.value + num;
@@ -104,4 +106,14 @@ function listarRegistroResultados(){
             </tr>    
         `
     })
+}
+
+function limpiarTodoHistorial(){
+    let respuesta = confirm('¿Desea eliminar el historial de resultados?');
+    respuesta ? (
+    almacenamiento.removeItem('arregloResultados'),
+    listarRegistroResultados(),
+    location.reload()
+    ) : ""
+    
 }
