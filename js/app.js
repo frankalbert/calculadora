@@ -1,3 +1,25 @@
+/*
+document.addEventListener("click", function(e) {
+  const id_elemento_clicado = e.target.id,
+    valor_elemento_clicado = e.target.value;
+  ( id_elemento_clicado === "cero" ||
+    id_elemento_clicado === "uno" ||
+    id_elemento_clicado === "dos" ||
+    id_elemento_clicado === "tres" ||
+    id_elemento_clicado === "cuatro" ||
+    id_elemento_clicado === "cinco" ||
+    id_elemento_clicado === "seis" ||
+    id_elemento_clicado === "siete" ||
+    id_elemento_clicado === "ocho" ||
+    id_elemento_clicado === "nueve" ||
+    id_elemento_clicado === "sumar" ||
+    id_elemento_clicado === "restar" ||
+    id_elemento_clicado === "multiplicar" ||
+    id_elemento_clicado === "dividir" ||
+    id_elemento_clicado === "punto"
+  ) ? ( insertar(valor_elemento_clicado)) : ""
+});
+*/
 let almacenamiento = window.localStorage;
 
 const resultado = document.querySelector("#resultado"),
@@ -71,11 +93,11 @@ multiplicar.addEventListener("click", function() {
 dividir.addEventListener("click", function() {
   insertar(dividir.value);
 });
-limpiar.addEventListener("click", function() {
-  resultado.value = "";
-});
 punto.addEventListener("click", function() {
   insertar(punto.value);
+});
+limpiar.addEventListener("click", function() {
+  resultado.value = "";
 });
 igual.addEventListener("click", function() {
   insertarResultado(resultado.value);
