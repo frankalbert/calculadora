@@ -1,3 +1,25 @@
+document.addEventListener("click", function(e) {
+  const id_elemento_clicado = e.target.id,
+    valor_elemento_clicado = e.target.value;
+  id_elemento_clicado === "cero" ||
+  id_elemento_clicado === "uno" ||
+  id_elemento_clicado === "dos" ||
+  id_elemento_clicado === "tres" ||
+  id_elemento_clicado === "cuatro" ||
+  id_elemento_clicado === "cinco" ||
+  id_elemento_clicado === "seis" ||
+  id_elemento_clicado === "siete" ||
+  id_elemento_clicado === "ocho" ||
+  id_elemento_clicado === "nueve" ||
+  id_elemento_clicado === "sumar" ||
+  id_elemento_clicado === "restar" ||
+  id_elemento_clicado === "multiplicar" ||
+  id_elemento_clicado === "dividir" ||
+  id_elemento_clicado === "punto"
+    ? insertar(valor_elemento_clicado)
+    : "";
+});
+
 let almacenamiento = window.localStorage;
 
 const resultado = document.querySelector("#resultado"),
@@ -29,53 +51,8 @@ const resultado = document.querySelector("#resultado"),
     )),
     listarRegistroResultados());
 
-cero.addEventListener("click", function() {
-  insertar(cero.value);
-});
-uno.addEventListener("click", function() {
-  insertar(uno.value);
-});
-dos.addEventListener("click", function() {
-  insertar(dos.value);
-});
-tres.addEventListener("click", function() {
-  insertar(tres.value);
-});
-cuatro.addEventListener("click", function() {
-  insertar(cuatro.value);
-});
-cinco.addEventListener("click", function() {
-  insertar(cinco.value);
-});
-seis.addEventListener("click", function() {
-  insertar(seis.value);
-});
-siete.addEventListener("click", function() {
-  insertar(siete.value);
-});
-ocho.addEventListener("click", function() {
-  insertar(ocho.value);
-});
-nueve.addEventListener("click", function() {
-  insertar(nueve.value);
-});
-sumar.addEventListener("click", function() {
-  insertar(sumar.value);
-});
-restar.addEventListener("click", function() {
-  insertar(restar.value);
-});
-multiplicar.addEventListener("click", function() {
-  insertar(multiplicar.value);
-});
-dividir.addEventListener("click", function() {
-  insertar(dividir.value);
-});
 limpiar.addEventListener("click", function() {
   resultado.value = "";
-});
-punto.addEventListener("click", function() {
-  insertar(punto.value);
 });
 igual.addEventListener("click", function() {
   insertarResultado(resultado.value);
